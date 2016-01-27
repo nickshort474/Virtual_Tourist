@@ -12,65 +12,48 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDelegate,NSFetchedResultsControllerDelegate {
 
-    
+   
     @IBOutlet weak var MapView: MKMapView!
+    @IBOutlet weak var deletePinButton: UIButton!
     
     
+    var droppedPin:PinAnnotation!
     
-    var annotations = [MKPointAnnotation]()
-    var pinArray:[Pin]!
-    
+    var deletePins:UIBarButtonItem!
+    var pinArray = [Pin]()
+    var newPin:Pin!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        deletePins =  UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.Plain, target:self, action:"removePinsFromMap")
+        self.navigationItem.rightBarButtonItem = deletePins
+        deletePinButton.hidden = true
+        deletePinButton.userInteractionEnabled = false
+        
+        
+        let singleTap:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "addNewPinToMap:")
+        singleTap.numberOfTouchesRequired = 1
+        singleTap.delegate = self
+        
+        MapView.addGestureRecognizer(singleTap)
         MapView.delegate = self
         
-        //let singleTap:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "addPinToMap:")
-        let smallTap:UITapGestureRecognizer = UITapGestureRecognizer(target:self,action:"addNewPinToMap:")
-        //smallTap.minimumPressDuration = 1
-        smallTap.numberOfTouchesRequired = 1
-        smallTap.delegate = self
-        
-        MapView.addGestureRecognizer(smallTap)
-        
-        
-        
-        
-        
-        /* fecthResultsController code
-        var error:NSError?
-        
-        do{
-            try fetchedResultsController.performFetch()
-        }catch let error1 as NSError{
-            error = error1
-        }
-        
-        if let error = error{
-            print("error performing fetch: \(error)")
-        }
-        */
-        
-        
-        
         pinArray = gatherPersistedPins()
-        
         addPersistedPinsToMap()
-        
-        /*
-            print(pinArray[0])
-            print(pinArray[0].longitude)
-            print(pinArray[0].latitude)
-        */
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
     
     // create sharedContext variable
     lazy var sharedContext:NSManagedObjectContext = {
@@ -78,214 +61,201 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
     }()
     
     
-    /*
     
-    lazy var fetchedResultsController:NSFetchedResultsController = {
-        
-        let fetchRequest = NSFetchRequest(entityName: "Pin")
-        fetchRequest.sortDescriptors = []
-        
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.sharedContext, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultsController.delegate = self
-        
-        return fetchedResultsController
-        
-    }()
+    func pathForImage(identifier:String)-> String{
+        let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+        return url.URLByAppendingPathComponent(identifier).path!
+    }
     
-    */
+    
+    
     
     func gatherPersistedPins() -> [Pin]{
-        
         let fetchRequest = NSFetchRequest(entityName: "Pin")
-        
         do{
             return try sharedContext.executeFetchRequest(fetchRequest) as! [Pin]
         }catch let error as NSError{
             print("Error in addPersistedPins(): \(error)")
             return [Pin]()
         }
-        
-        
-        //let pin = self.fetchedResultsController.objectAtIndexPath(NSIndexPath(index: 0)) as! Pin
-        //let currentPin = fetchedResultsController.fetchedObjects![0]
-        //print(pin)
-       //print(pin.longitude)
     }
+    
     
     func addPersistedPinsToMap(){
-        
         for(var i:Int = 0; i < pinArray.count; i++){
-            let pinCoords:CLLocationCoordinate2D = CLLocationCoordinate2DMake(pinArray[i].latitude,pinArray[i].longitude)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = pinCoords
-            annotation.title = "Persisted Pin"
+            let pinCoords:CLLocationCoordinate2D = CLLocationCoordinate2DMake(pinArray[i].latitude as Double,pinArray[i].longitude as Double)
+            let annotation = PinAnnotation(pin: pinArray[i],coords: pinCoords)
             self.MapView.addAnnotation(annotation)
         }
-        
-        
     }
     
     
-    func addNewPinToMap(gestureRecognizer:UIGestureRecognizer){
+    func addNewPinToMap(gestureRecognizer:UILongPressGestureRecognizer){
         
+        let location = gestureRecognizer.locationInView(MapView)
+        let coords:CLLocationCoordinate2D = MapView.convertPoint(location, toCoordinateFromView:MapView)
         
-        let tapPoint:CGPoint = gestureRecognizer.locationInView(MapView)
-        let touchCoords:CLLocationCoordinate2D = MapView.convertPoint(tapPoint, toCoordinateFromView: MapView)
-        
-        
-        // create Pin instance
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = touchCoords
-        annotation.title = "TBD"
-        self.MapView.addAnnotation(annotation)
-        
-        //TODO: Save Pin to core data
-        var pinDic:[String:AnyObject] = [String:AnyObject]()
-        
-        
-        pinDic[Pin.Keys.latitude] = touchCoords.latitude
-        pinDic[Pin.Keys.longitude] = touchCoords.longitude
-       
-        
-        dispatch_async(dispatch_get_main_queue()){
-            let newPin = Pin(dictionary: pinDic, context: self.sharedContext)
+        switch gestureRecognizer.state{
+        case .Began:
             
-            do{
-                try self.sharedContext.save()
+            droppedPin = PinAnnotation(pin: nil,coords:coords)
+            droppedPin.willChangeValueForKey("coordinate")
+            droppedPin.coordinate = coords
+            droppedPin.didChangeValueForKey("coordinate")
+            self.MapView.addAnnotation(droppedPin)
+            
+        case .Changed:
+            
+            droppedPin.willChangeValueForKey("coordinate")
+            droppedPin.coordinate = coords
+            droppedPin.didChangeValueForKey("coordinate")
+            
+            
+        case .Ended:
+            
+            self.centerMap(coords)
+            
+            // create bounding box entity and associate it with pin
+            var boundingDictionary:[String:AnyObject] = [String:AnyObject]()
+            boundingDictionary[Box.Keys.minLong] = coords.longitude - 0.02 
+            boundingDictionary[Box.Keys.minLat] = coords.latitude - 0.02
+            boundingDictionary[Box.Keys.maxLong] = coords.longitude + 0.02
+            boundingDictionary[Box.Keys.maxLat] = coords.latitude + 0.02
+            boundingDictionary[Box.Keys.pageNumber] = 1
+           
+            
+            // set up pin dictionary
+            var pinDic:[String:AnyObject] = [String:AnyObject]()
+            pinDic[Pin.Keys.latitude] = coords.latitude
+            pinDic[Pin.Keys.longitude] = coords.longitude
+            
+            // create new pin object
+            self.newPin = Pin(dictionary: pinDic, context: self.sharedContext)
+            self.pinArray.append(self.newPin)
+            droppedPin.pin = self.newPin
+            
+            let newBox = Box(dictionary: boundingDictionary, context: self.sharedContext)
+            newBox.pin = self.newPin
+            
+            
+            var localPathArray:[String] = []
+            var urlArray:[NSURL] = []
+            VTClient.Count.downloaded = 0
+            
+            
+            // do core data stuff
+            VTClient.sharedInstance().connectToFlickr(boundingDictionary){
+                (result,photoID,error) in
                 
-            }catch let error as NSError{
-                print("error saving context: \(error.localizedDescription)")
-            }
-        }
-        
-        
-        
-        //CoreDataStackManager.sharedInstance().saveContext()
-        
-        
-        var boundingBox:[String] = [String]()
-        boundingBox.append(String(touchCoords.latitude - 1.0))
-        boundingBox.append(String(touchCoords.longitude - 1.0))
-        boundingBox.append(String(touchCoords.latitude + 1.0))
-        boundingBox.append(String(touchCoords.longitude + 1.0))
-        
-        
-        
-        VirtualTouristClient.sharedInstance().connectToFlickr(boundingBox){
-            (result,error) in
-            
-            print("The result is:\(result)")
-            
-            for(var i:Int = 0; i < result.count ; i++){
-                var photoDic:[String:AnyObject] = [String:AnyObject]()
-                photoDic[Photo.Keys.imagePath] = result[i]
-                
-                dispatch_async(dispatch_get_main_queue()){
+                for(var i:Int = 0; i < photoID.count ; i++){
+                    
+                    // use returned imageURL path to save to core data
+                    let fullPath = self.pathForImage(photoID[i] as! String)
+                    localPathArray.append(fullPath)
+                    
+                    let newURL = result[i] as! NSURL
+                    urlArray.append(newURL)
+                    
+                    // set up photo dictionary
+                    var photoDic:[String:AnyObject] = [String:AnyObject]()
+                    
+                    // add path to image in docs directory to core data
+                    photoDic[Photo.Keys.imagePath] = fullPath
+                    photoDic[Photo.Keys.savedToDirectory] = "No"
                     
                     let newPhoto = Photo(dictionary: photoDic, context: self.sharedContext)
+                    newPhoto.pin = self.newPin
                     
                     do{
                         try self.sharedContext.save()
-                        
                     }catch let error as NSError{
                         print("error saving context: \(error.localizedDescription)")
-                    }
-                }
+                    }                }
+                print("connectToFlicr returned")
+                VTClient.sharedInstance().getPictures(urlArray,pathArray: localPathArray)
+                print("get pictures")
                 
-            }
-            //TODO: add photo results to core data ready to be fetched from collection controller
+            }// end of connectToFlickr
             
-            
-            /*
-            
-            
-            
-            
-            //photoDic[Photo.Keys.title] = touchCoords.longitude
-            
-            dispatch_async(dispatch_get_main_queue()){
-                
-                let newPhoto = Photo(dictionary: photoDic, context: self.sharedContext)
-                
-                do{
-                    try self.sharedContext.save()
-                    
-                }catch let error as NSError{
-                    print("error saving context: \(error.localizedDescription)")
-                }
-            }
-            */
+        default:
+            print("Default, other")
         }
         
     }
     
     
-    
-    // create map
-    /*
-    
-    func addToMap(){
+    func centerMap(coords:CLLocationCoordinate2D){
         
-       
-        let lat = CLLocationDegrees(52)
-        let long = CLLocationDegrees(0.5)
+        let coordSpan = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
         
-        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "Hello"
-        annotation.subtitle = "info here"
-        
-        self.annotations.append(annotation)
-        print(annotations)
-        self.MapView.addAnnotations(self.annotations)
+        let coordinateRegion = MKCoordinateRegionMake(coords,coordSpan)
+        MapView.setRegion(coordinateRegion, animated: true)
     }
-    */
     
-    // TODO: Change code to segue to collection view controller with map
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func removePinsFromMap(){
         
-        
-        let reuseId = "pin"
-        
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-        
-        if pinView == nil{
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView!.canShowCallout = true
-            pinView!.pinTintColor = UIColor.redColor()
-            pinView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        if(deletePins.title == "Edit"){
+            deletePinButton.hidden = false
+            deletePins.title = "Done"
         }else{
-            pinView!.annotation = annotation
+            deletePinButton.hidden = true
+            deletePins.title = "Edit"
         }
-        
-        return pinView
     }
     
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+       
+        if(deletePinButton.hidden == false){
+            
+            // remove pin from map
+            let pinAnnotation = view.annotation as! PinAnnotation
+            self.MapView.removeAnnotation(pinAnnotation)
+            
+            //remove from core data
+            let pinPredicate = NSPredicate(format: "latitude == %@", pinAnnotation.pin.latitude)
+            let fetchRequest = NSFetchRequest(entityName: "Pin")
+            fetchRequest.predicate = pinPredicate
+            
+            do{
+                let fetchedEntities = try sharedContext.executeFetchRequest(fetchRequest) as! [Pin]
+                if let entityToDelete = fetchedEntities.first{
+                    sharedContext.deleteObject(entityToDelete)
+                }
+            }catch{
+                //TODO: handle errors
+            }
+            
+            //Get rid of any core data photos related to Pin
+            let photoPredicate = NSPredicate(format:"pin == %@",pinAnnotation.pin)
+            let photoFetchRequest = NSFetchRequest(entityName: "Photo")
+            photoFetchRequest.predicate = photoPredicate
+            
+            do{
+                let fetchEntities = try sharedContext.executeFetchRequest(photoFetchRequest) as! [Photo]
+                
+                for entity in fetchEntities{
+                    sharedContext.deleteObject(entity)
+            }
+                
+            }catch{
+                //TODO: deal with errors
+            }
+            
+            do{
+                try sharedContext.save()
+            }catch{
+                //TODO:handle errors
+            }
     
-    
-    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-        if control == annotationView.rightCalloutAccessoryView {
-            print("annotation clicked")
-            
-            //let app = UIApplication.sharedApplication()
-            //app.openURL(NSURL(string: annotationView.annotation!.subtitle!!)!)
-            
-            
-            // TODO: segue to collection view controller
-            
+        }else{
+            // if not deleting a pin segue to collection 
+            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController
+            let pin = view.annotation as! PinAnnotation
+            controller.currentPinAnnotation = pin
+            self.navigationController?.pushViewController(controller, animated: true)
         }
-        
     }
-    
-    
-    
-    // create pin drop using tap and hold
-    
-    //have pin click open new view controller
+   
 }
 

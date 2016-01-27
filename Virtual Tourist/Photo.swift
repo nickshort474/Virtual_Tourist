@@ -14,13 +14,12 @@ class Photo:NSManagedObject{
     
     struct Keys{
         static let imagePath = "imagePath"
-        //static let title = "title"
-        
+        static let savedToDirectory = "savedToDirectory"
     }
     
     @NSManaged var imagePath:String
-    //@NSManaged var title:String
-    //@NSManaged var photoId:Int
+    @NSManaged var savedToDirectory:String
+    @NSManaged var pin:Pin?
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
@@ -33,10 +32,20 @@ class Photo:NSManagedObject{
         super.init(entity: entity,insertIntoManagedObjectContext: context)
         
         imagePath = dictionary[Photo.Keys.imagePath] as! String
-        //title = dictionary[Photo.Keys.title] as! String
         
-        
+        savedToDirectory = dictionary[Photo.Keys.savedToDirectory] as! String
     }
     
     
+    override func prepareForDeletion() {
+        
+        if NSFileManager.defaultManager().fileExistsAtPath(imagePath){
+            do{
+                try  NSFileManager.defaultManager().removeItemAtPath(imagePath)
+            }catch{
+                // TODO: deal with error
+            }
+        }
+        
+    }
 }
