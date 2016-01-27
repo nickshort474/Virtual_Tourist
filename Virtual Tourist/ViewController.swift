@@ -212,7 +212,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             let pinAnnotation = view.annotation as! PinAnnotation
             self.MapView.removeAnnotation(pinAnnotation)
             
-            //remove from core data
+            //remove Pin from core data
             let pinPredicate = NSPredicate(format: "latitude == %@", pinAnnotation.pin.latitude)
             let fetchRequest = NSFetchRequest(entityName: "Pin")
             fetchRequest.predicate = pinPredicate
@@ -226,7 +226,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                 //TODO: handle errors
             }
             
-            //Get rid of any core data photos related to Pin
+            //Remove photos from core data related to Pin
             let photoPredicate = NSPredicate(format:"pin == %@",pinAnnotation.pin)
             let photoFetchRequest = NSFetchRequest(entityName: "Photo")
             photoFetchRequest.predicate = photoPredicate
@@ -236,12 +236,28 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                 
                 for entity in fetchEntities{
                     sharedContext.deleteObject(entity)
-            }
+                }
                 
             }catch{
                 //TODO: deal with errors
             }
             
+            //Remove box entity related to Pin
+            let boxPredicate = NSPredicate(format: "pin", pinAnnotation.pin)
+            let boxFetchRequest = NSFetchRequest(entityName: "Box")
+            boxFetchRequest.predicate = boxPredicate
+            
+            do{
+                let fetchEntities = try sharedContext.executeFetchRequest(boxFetchRequest) as! [Box]
+                if let entityToDelete = fetchEntities.first{
+                    sharedContext.deleteObject(entityToDelete)
+                }
+            }catch{
+                
+            }
+            
+            
+            // save context
             do{
                 try sharedContext.save()
             }catch{
