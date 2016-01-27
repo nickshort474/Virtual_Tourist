@@ -22,14 +22,14 @@ class VTClient:NSObject{
     func connectToFlickr(boundingDictionary:[String:AnyObject],completionHandler:(result: AnyObject!,photoID:[AnyObject], error: NSError?) -> Void){
         
         
-        //TODO: alter method to get correct data from boundingBox
+        //Turn dictionary data into string
         let bbox:String = "\(boundingDictionary[Box.Keys.minLong]!)" + "," +  "\(boundingDictionary[Box.Keys.minLat]!)" + "," + "\(boundingDictionary[Box.Keys.maxLong]!)" + "," + "\(boundingDictionary[Box.Keys.maxLat]!)"
         
-        //TODO: Add pageNumber to core data somewhere
+        //Get page number from dictionary
         let pageNumber = boundingDictionary[Box.Keys.pageNumber]
         
         
-        
+        // setup parameters
         let parameters = [
             "method":VTClient.Constants.searchMethod,
             "api_key":VTClient.Constants.flickrAPI,
@@ -42,21 +42,20 @@ class VTClient:NSObject{
         ]
         
         
-        
+        // create URL
         let baseURL = VTClient.Constants.flickrURL
         let urlString = VTClient.sharedInstance().escapedParameters(parameters as! [String : AnyObject])
-        
         let fullURL:String = "\(baseURL)\(urlString)"
-        
         let URL = NSURL(string: fullURL)
+        
+        
         let request = NSMutableURLRequest(URL: URL!)
         
+        // Send request
         let task = session.dataTaskWithRequest(request){
             (data, response, downloadError) in
             
             if let error = downloadError{
-                // handle error
-                
                 let photoID = [AnyObject]()
                 
                 completionHandler(result: response,photoID:photoID,error: error)
@@ -68,7 +67,7 @@ class VTClient:NSObject{
                     
                      self.processReturnedData(result as! [String : AnyObject]){
                         (result,photoID,error) in
-                        print(result)
+                        
                         completionHandler(result:result,photoID:photoID,error:error)
                     }
                 }
@@ -77,7 +76,7 @@ class VTClient:NSObject{
         task.resume()
     }
     
-    
+    // process JSON
     func processReturnedData(result:[String:AnyObject],completionHandler:(result: [NSURL],photoIDs:[AnyObject], error: NSError?) -> Void){
         
         var imageURLArray:[NSURL] = []
@@ -124,7 +123,7 @@ class VTClient:NSObject{
     }
     
     
-    
+    // Get pictures
     func getPictures(urlArray:[NSURL],pathArray:[String]){
         
         for(var i:Int = 0; i < urlArray.count; i++){
@@ -143,31 +142,30 @@ class VTClient:NSObject{
             do{
                 
                 let fetchedEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Photo]
-                
-                // TODO: fix error here
-                
                 fetchedEntities.first!.savedToDirectory = "Yes"
                 
+                // increment count variable for colleciton view controller use
                 VTClient.Count.downloaded++
                 
             }catch{
                 
             }
             
+            
+            
+            
+        }
+        // save context
             do{
                 try self.sharedContext.save()
             }catch{
                 
             }
-            
-            
-        }
-        
         
         
     }
     
-    
+    // create singleton
     class func sharedInstance() -> VTClient {
         
         struct Singleton {

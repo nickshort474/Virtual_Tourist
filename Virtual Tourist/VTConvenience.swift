@@ -10,6 +10,7 @@ import Foundation
 
 extension VTClient{
     
+    // escape parameters
     func escapedParameters(parameters: [String : AnyObject]) -> String {
         
         var urlVars = [String]()
@@ -32,8 +33,7 @@ extension VTClient{
     
     
     
-    //parse returned JSON
-    
+    //parse returned data into usable JSON
     func parseJSON(data: NSData, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
         
         
@@ -50,8 +50,9 @@ extension VTClient{
         
         completionHandler(result: parsedResult, error: nil)
     }
-     
     
+    
+    //path helper function
     func pathForImage(identifier:String)-> String{
         let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
         return url.URLByAppendingPathComponent(identifier).path!

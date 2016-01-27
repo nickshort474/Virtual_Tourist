@@ -168,17 +168,18 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                     
                     do{
                         try self.sharedContext.save()
-                    }catch let error as NSError{
-                        print("error saving context: \(error.localizedDescription)")
-                    }                }
-                print("connectToFlicr returned")
+                    }catch{
+                        
+                    }
+                }
+               
                 VTClient.sharedInstance().getPictures(urlArray,pathArray: localPathArray)
-                print("get pictures")
+                
                 
             }// end of connectToFlickr
             
-        default:
-            print("Default, other")
+        default: break
+            
         }
         
     }
@@ -223,7 +224,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                     sharedContext.deleteObject(entityToDelete)
                 }
             }catch{
-                //TODO: handle errors
+               
             }
             
             //Remove photos from core data related to Pin
@@ -239,7 +240,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                 }
                 
             }catch{
-                //TODO: deal with errors
+                
             }
             
             //Remove box entity related to Pin
@@ -261,7 +262,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             do{
                 try sharedContext.save()
             }catch{
-                //TODO:handle errors
+            
             }
     
         }else{

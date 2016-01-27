@@ -33,7 +33,6 @@ class Box:NSManagedObject{
     
     init(dictionary: [String : AnyObject], context: NSManagedObjectContext) {
         
-        
         let entity =  NSEntityDescription.entityForName("Box", inManagedObjectContext: context)!
         super.init(entity: entity,insertIntoManagedObjectContext: context)
         

@@ -27,12 +27,10 @@ class Photo:NSManagedObject{
     
     init(dictionary: [String : AnyObject], context: NSManagedObjectContext) {
         
-        
         let entity =  NSEntityDescription.entityForName("Photo", inManagedObjectContext: context)!
         super.init(entity: entity,insertIntoManagedObjectContext: context)
         
         imagePath = dictionary[Photo.Keys.imagePath] as! String
-        
         savedToDirectory = dictionary[Photo.Keys.savedToDirectory] as! String
     }
     
@@ -43,7 +41,7 @@ class Photo:NSManagedObject{
             do{
                 try  NSFileManager.defaultManager().removeItemAtPath(imagePath)
             }catch{
-                // TODO: deal with error
+                
             }
         }
         

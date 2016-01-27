@@ -31,7 +31,7 @@ class CoreDataStackManager {
     
     lazy var applicationDocumentsDirectory: NSURL = {
         
-        //print("Instantiating the applicationDocumentsDirectory property")
+        
         
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
@@ -43,8 +43,6 @@ class CoreDataStackManager {
     
     lazy var managedObjectModel: NSManagedObjectModel = {
        
-        //print("Instantiating the managedObjectModel property")
-        
         let modelURL = NSBundle.mainBundle().URLForResource("Virtual_Tourist", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
@@ -55,14 +53,10 @@ class CoreDataStackManager {
     
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         
-        //print("Instantiating the persistentStoreCoordinator property")
-        
-        let coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+                let coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(SQLITE_FILE_NAME)
         
-        //print("sqlite path: \(url.path!)")
-        
-        var failureReason = "There was an error creating or loading the application's saved data."
+                var failureReason = "There was an error creating or loading the application's saved data."
         do {
             try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
         } catch {
@@ -76,11 +70,9 @@ class CoreDataStackManager {
             
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
            
-            // TODO: handle error code
-            // TODO: Remove abort() code
             
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
+            
         }
         
         return coordinator
@@ -107,12 +99,9 @@ class CoreDataStackManager {
                 try managedObjectContext.save()
             } catch {
                 
-                // TODO: handle error code
-                // TODO: Remove abort() code
-                
                 let nserror = error as NSError
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
+                
             }
         }
     }

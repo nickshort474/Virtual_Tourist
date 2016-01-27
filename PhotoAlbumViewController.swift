@@ -126,9 +126,7 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
         
         
         cell.cellImageView.image = UIImage(named:"placeholder")
-            
         
-        //TODO: Necessary?
         if(fetchedResultsController.fetchedObjects?.count != 0){
            
             let imageReference = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
@@ -248,72 +246,72 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
        
         //call function to delete all pcitures with completion handler
         deleteCurrentPictures(){
-        () in
+            () in
             
-        // get new colleciton of pictures
-        var boundingDictionary:[String:AnyObject] = [String:AnyObject]()
+            // get new colleciton of pictures
+            var boundingDictionary:[String:AnyObject] = [String:AnyObject]()
         
-        let fetchBoxRequest = NSFetchRequest(entityName: "Box")
-        let predicate = NSPredicate(format: "pin == %@", self.currentPin)
-        fetchBoxRequest.predicate = predicate
+            let fetchBoxRequest = NSFetchRequest(entityName: "Box")
+            let predicate = NSPredicate(format: "pin == %@", self.currentPin)
+            fetchBoxRequest.predicate = predicate
         
-        do{
-           let fetchedEntity = try self.sharedContext.executeFetchRequest(fetchBoxRequest) as! [Box]
+            do{
+                let fetchedEntity = try self.sharedContext.executeFetchRequest(fetchBoxRequest) as! [Box]
             
-            boundingDictionary[Box.Keys.minLong] = fetchedEntity.first?.minLong
-            boundingDictionary[Box.Keys.minLat] = fetchedEntity.first?.minLat
-            boundingDictionary[Box.Keys.maxLong] = fetchedEntity.first?.maxLong
-            boundingDictionary[Box.Keys.maxLat] = fetchedEntity.first?.maxLat
+                boundingDictionary[Box.Keys.minLong] = fetchedEntity.first?.minLong
+                boundingDictionary[Box.Keys.minLat] = fetchedEntity.first?.minLat
+                boundingDictionary[Box.Keys.maxLong] = fetchedEntity.first?.maxLong
+                boundingDictionary[Box.Keys.maxLat] = fetchedEntity.first?.maxLat
             
-            var newPageNumber = fetchedEntity.first?.pageNumber as! Int
-            newPageNumber++
-            boundingDictionary[Box.Keys.pageNumber] = newPageNumber
-            fetchedEntity.first?.pageNumber = newPageNumber as NSNumber
+                var newPageNumber = fetchedEntity.first?.pageNumber as! Int
+                newPageNumber++
+                boundingDictionary[Box.Keys.pageNumber] = newPageNumber
+                fetchedEntity.first?.pageNumber = newPageNumber as NSNumber
             
-        }catch{
-           // TODO: deal with errors
-        }
+            }catch{
+          
+            }
         
         
-        var localPathArray:[String] = []
-        var urlArray:[NSURL] = []
+            var localPathArray:[String] = []
+            var urlArray:[NSURL] = []
           
             
-        VTClient.sharedInstance().connectToFlickr(boundingDictionary){
-            (result,photoID,error)in
+            VTClient.sharedInstance().connectToFlickr(boundingDictionary){
+                (result,photoID,error)in
             
-            for(var i:Int = 0; i < photoID.count ; i++){
-                print("loop count \(i)")
-                // use returned imageURL path to save to core data
-                let fullPath = self.pathForImage(photoID[i] as! String)
-                
-                localPathArray.append(fullPath)
-                let newURL = result[i] as! NSURL
-                urlArray.append(newURL)
-                
-                
-                // set up photo dictionary
-                var photoDic:[String:AnyObject] = [String:AnyObject]()
-                
-                // add path to image in docs directory to core data
-                photoDic[Photo.Keys.imagePath] = fullPath
-                photoDic[Photo.Keys.savedToDirectory] = "No"
-                                    
-                let newPhoto = Photo(dictionary: photoDic, context: self.sharedContext)
-                newPhoto.pin = self.currentPin
-                
-                
-                
-                do{
-                    try self.sharedContext.save()
-                }catch{
+                for(var i:Int = 0; i < photoID.count ; i++){
                     
-                }
-            }// end of for loop
+                    // use returned imageURL path to save to core data
+                    let fullPath = self.pathForImage(photoID[i] as! String)
+                
+                    localPathArray.append(fullPath)
+                    let newURL = result[i] as! NSURL
+                    urlArray.append(newURL)
+                
+                
+                    // set up photo dictionary
+                    var photoDic:[String:AnyObject] = [String:AnyObject]()
+                
+                    // add path to image in docs directory to core data
+                    photoDic[Photo.Keys.imagePath] = fullPath
+                    photoDic[Photo.Keys.savedToDirectory] = "No"
+                                    
+                    let newPhoto = Photo(dictionary: photoDic, context: self.sharedContext)
+                    newPhoto.pin = self.currentPin
+                
+                
+                
+                    do{
+                        try self.sharedContext.save()
+                    }catch{
+                        
+                    }
+                }// end of for loop
             
-            VTClient.sharedInstance().getPictures(urlArray,pathArray: localPathArray)
+                VTClient.sharedInstance().getPictures(urlArray,pathArray: localPathArray)
           
-        }
+            }
         }
     }
     
@@ -334,9 +332,7 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
             let fetchedPhotos = try sharedContext.executeFetchRequest(fetchedPhotoRequest) as! [Photo]
             
             for photo in fetchedPhotos{
-                                
                 sharedContext.deleteObject(photo)
-                print("object freed")
             }
             
             do{
@@ -344,13 +340,9 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
             }catch{
                 
             }
-            
-            
         }catch{
-            // TODO : Deal with errors
             
         }
-        print("completion handler")
         completionHandler()
         
     }

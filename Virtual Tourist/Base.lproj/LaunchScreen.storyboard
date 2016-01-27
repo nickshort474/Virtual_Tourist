@@ -20,8 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-cs-gwS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Virtual Tourist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNA-1W-grj">
-                                <rect key="frame" x="150" y="37" width="310" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Virtual Tourist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNA-1W-grj">
+                                <rect key="frame" x="150" y="40" width="310" height="65"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -29,6 +29,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HNA-1W-grj" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="Pju-qQ-Obs"/>
                             <constraint firstItem="eFD-cs-gwS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="T8L-dH-48n"/>
                             <constraint firstItem="eFD-cs-gwS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uBf-lj-xgU"/>
                             <constraint firstItem="HNA-1W-grj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zwG-8B-gmp"/>
