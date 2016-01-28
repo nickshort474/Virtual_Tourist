@@ -14,10 +14,12 @@ class Pin:NSManagedObject{
     struct Keys{
         static let latitude = "latitude"
         static let longitude = "longitude"
+        static let firstTransition = "firstTransition"
     }
     
     @NSManaged var latitude: NSNumber
     @NSManaged var longitude: NSNumber
+    @NSManaged var firstTransition:String
     @NSManaged var photos:[Photo]
     
     
@@ -32,7 +34,7 @@ class Pin:NSManagedObject{
         
         latitude = dictionary[Keys.latitude] as! NSNumber
         longitude = dictionary[Keys.longitude] as! NSNumber
-        
+        firstTransition = dictionary[Keys.firstTransition] as! String
     }
     
     

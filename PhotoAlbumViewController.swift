@@ -35,8 +35,7 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
         removePictures.hidden = true
         collectionView.delegate = self
         
-        newCollection.enabled = false
-        newCollection.alpha = 0.5
+        
         
         currentPin = self.currentPinAnnotation.pin
         addPinToMap()
@@ -52,6 +51,47 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
         if let error = error{
             print("error performing fetch: \(error)")
         }
+        
+        
+        // fetch Pin
+        
+        //let objectID = self.currentPin.objectID
+        
+        let fetchRequest = NSFetchRequest(entityName: "Pin")
+        
+        let predicate = NSPredicate(format: "latitude == %@", self.currentPin.latitude)
+        
+        //let predicate = NSPredicate(format:"id == %@", objectID)
+        
+        fetchRequest.predicate = predicate
+        
+        do{
+            let entity = try sharedContext.executeFetchRequest(fetchRequest) as! [Pin]
+            
+            // get value of firstTransition for Pin
+            
+            let fetchedEntity = entity.first?.firstTransition
+            
+            if(fetchedEntity == "true"){
+                    
+               // disable newCollection button until all images have loaded
+               print("newCollection.enabled = false")
+               newCollection.enabled = false
+               newCollection.alpha = 0.5
+                    
+               // set firstTransition to false ready for when application restarts, so newCollection button can be used
+                    
+               entity.first?.firstTransition = "false"
+               do{
+                    try self.sharedContext.save()
+                }catch{
+                        
+                }
+            }
+        }catch{
+            
+        }
+        
     }
     
     
@@ -130,14 +170,20 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
         if(fetchedResultsController.fetchedObjects?.count != 0){
            
             let imageReference = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
-            let pathToImage = imageReference.imagePath
             
-            if let imageData = NSFileManager.defaultManager().contentsAtPath(pathToImage){
+            
+            //let pathToImage = imageReference.imagePath
+            let pathToImageURL = NSURL(fileURLWithPath: imageReference.imagePath)
+            let fullPath = VTClient.sharedInstance().pathForImage(pathToImageURL.lastPathComponent!)
+            
+            
+            if let imageData = NSFileManager.defaultManager().contentsAtPath(fullPath){
                 cell.cellImageView.image = UIImage(data: imageData)
             }
             
         }
         
+        //TODO: change for when application restarts
         if(VTClient.Count.downloaded == self.fetchedResultsController.fetchedObjects?.count){
             self.newCollection.alpha = 1
             self.newCollection.enabled = true
@@ -283,7 +329,7 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
                 for(var i:Int = 0; i < photoID.count ; i++){
                     
                     // use returned imageURL path to save to core data
-                    let fullPath = self.pathForImage(photoID[i] as! String)
+                    let fullPath = VTClient.sharedInstance().pathForImage(photoID[i] as! String)
                 
                     localPathArray.append(fullPath)
                     let newURL = result[i] as! NSURL
@@ -365,16 +411,16 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
             sharedContext.deleteObject(photo)
         }
         
+        do{
+            try self.sharedContext.save()
+        }catch{
+            
+        }
         selectedCells = [NSIndexPath]()
         
         newCollection.hidden = false
         removePictures.hidden = true
     }
-    
-    
-    func pathForImage(identifier:String)-> String{
-        let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-        return url.URLByAppendingPathComponent(identifier).path!
-    }
+        
  
 }

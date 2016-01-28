@@ -36,9 +36,12 @@ class Photo:NSManagedObject{
     
     override func prepareForDeletion() {
         
-        if NSFileManager.defaultManager().fileExistsAtPath(imagePath){
+        let pathToImageURL = NSURL(fileURLWithPath: imagePath)
+        let fullPath = VTClient.sharedInstance().pathForImage(pathToImageURL.lastPathComponent!)
+        
+        if NSFileManager.defaultManager().fileExistsAtPath(fullPath){
             do{
-                try  NSFileManager.defaultManager().removeItemAtPath(imagePath)
+                try  NSFileManager.defaultManager().removeItemAtPath(fullPath)
             }catch{
                 
             }

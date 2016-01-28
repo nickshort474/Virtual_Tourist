@@ -23,7 +23,7 @@ extension VTClient{
     }
     
     struct Count{
-        static var downloaded:Int = 0
+        static var downloaded:Int!
     }
     
 }

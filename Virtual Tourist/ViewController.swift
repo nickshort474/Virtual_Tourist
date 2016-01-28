@@ -61,14 +61,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
     }()
     
     
-    
-    func pathForImage(identifier:String)-> String{
-        let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-        return url.URLByAppendingPathComponent(identifier).path!
-    }
-    
-    
-    
+        
     
     func gatherPersistedPins() -> [Pin]{
         let fetchRequest = NSFetchRequest(entityName: "Pin")
@@ -128,6 +121,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             var pinDic:[String:AnyObject] = [String:AnyObject]()
             pinDic[Pin.Keys.latitude] = coords.latitude
             pinDic[Pin.Keys.longitude] = coords.longitude
+            pinDic[Pin.Keys.firstTransition] = "true"
             
             // create new pin object
             self.newPin = Pin(dictionary: pinDic, context: self.sharedContext)
@@ -140,6 +134,9 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             
             var localPathArray:[String] = []
             var urlArray:[NSURL] = []
+            
+            
+            //TODO: if application restart don't reset count
             VTClient.Count.downloaded = 0
             
             
@@ -150,7 +147,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                 for(var i:Int = 0; i < photoID.count ; i++){
                     
                     // use returned imageURL path to save to core data
-                    let fullPath = self.pathForImage(photoID[i] as! String)
+                    let fullPath = VTClient.sharedInstance().pathForImage(photoID[i] as! String)
                     localPathArray.append(fullPath)
                     
                     let newURL = result[i] as! NSURL
@@ -267,6 +264,12 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
     
         }else{
             // if not deleting a pin segue to collection 
+            
+            //TODO: if first transition set core data element to true
+            
+            
+            
+            
             let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController
             let pin = view.annotation as! PinAnnotation
             controller.currentPinAnnotation = pin

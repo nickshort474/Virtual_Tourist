@@ -144,8 +144,10 @@ class VTClient:NSObject{
                 let fetchedEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Photo]
                 fetchedEntities.first!.savedToDirectory = "Yes"
                 
-                // increment count variable for colleciton view controller use
-                VTClient.Count.downloaded++
+                // increment count variable for collection view controller use
+                var downloadCount = VTClient.Count.downloaded!
+                downloadCount++
+                VTClient.Count.downloaded = downloadCount
                 
             }catch{
                 
