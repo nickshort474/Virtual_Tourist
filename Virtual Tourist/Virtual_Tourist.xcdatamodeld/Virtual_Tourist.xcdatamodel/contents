@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="Box" representedClassName=".Box" syncable="YES">
         <attribute name="maxLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="maxLong" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -16,8 +16,8 @@
     <entity name="Pin" representedClassName=".Pin" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
-        <relationship name="box" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Box" inverseName="pin" inverseEntity="Box" syncable="YES"/>
-        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="pin" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="box" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Box" inverseName="pin" inverseEntity="Box" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="pin" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
         <element name="Box" positionX="-63" positionY="18" width="128" height="135"/>

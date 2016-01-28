@@ -228,7 +228,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             }
             
             //Remove photos from core data related to Pin
-            let photoPredicate = NSPredicate(format:"pin == %@",pinAnnotation.pin)
+            /*let photoPredicate = NSPredicate(format:"pin == %@",pinAnnotation.pin)
             let photoFetchRequest = NSFetchRequest(entityName: "Photo")
             photoFetchRequest.predicate = photoPredicate
             
@@ -244,7 +244,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             }
             
             //Remove box entity related to Pin
-            let boxPredicate = NSPredicate(format: "pin", pinAnnotation.pin)
+            let boxPredicate = NSPredicate(format: "pin == %@", pinAnnotation.pin)
             let boxFetchRequest = NSFetchRequest(entityName: "Box")
             boxFetchRequest.predicate = boxPredicate
             
@@ -257,7 +257,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                 
             }
             
-            
+            */
             // save context
             do{
                 try sharedContext.save()
@@ -270,6 +270,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController
             let pin = view.annotation as! PinAnnotation
             controller.currentPinAnnotation = pin
+            mapView.deselectAnnotation(pin, animated: true)
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }

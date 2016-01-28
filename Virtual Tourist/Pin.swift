@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 import CoreData
 
 class Pin:NSManagedObject{
@@ -15,7 +14,7 @@ class Pin:NSManagedObject{
     struct Keys{
         static let latitude = "latitude"
         static let longitude = "longitude"
-        }
+    }
     
     @NSManaged var latitude: NSNumber
     @NSManaged var longitude: NSNumber
