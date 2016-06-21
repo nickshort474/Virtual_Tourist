@@ -22,6 +22,7 @@
 		36CD671B1C26E01A003634D8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CD671A1C26E01A003634D8 /* Photo.swift */; };
 		36CD671D1C26E082003634D8 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CD671C1C26E082003634D8 /* Pin.swift */; };
 		36D29F161C3997D400F44762 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D29F151C3997D400F44762 /* CollectionViewCell.swift */; };
+		36D59A601D19A6EA008A8A4D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36D59A5F1D19A6EA008A8A4D /* .gitignore */; };
 		36D7DE0A1C4F9A5F0036BFC5 /* VTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7DE091C4F9A5F0036BFC5 /* VTClient.swift */; };
 		36D7DE0C1C4F9AB20036BFC5 /* VTConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7DE0B1C4F9AB20036BFC5 /* VTConvenience.swift */; };
 		36D7DE0F1C4F9BA60036BFC5 /* VTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7DE0E1C4F9BA60036BFC5 /* VTConstants.swift */; };
@@ -67,6 +68,7 @@
 		36CD671A1C26E01A003634D8 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		36CD671C1C26E082003634D8 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		36D29F151C3997D400F44762 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		36D59A5F1D19A6EA008A8A4D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		36D7DE091C4F9A5F0036BFC5 /* VTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTClient.swift; sourceTree = "<group>"; };
 		36D7DE0B1C4F9AB20036BFC5 /* VTConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTConvenience.swift; sourceTree = "<group>"; };
 		36D7DE0E1C4F9BA60036BFC5 /* VTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTConstants.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				36A3B4241C021F04002B1A03 /* LaunchScreen.storyboard */,
 				36A3B4271C021F04002B1A03 /* Info.plist */,
 				36A3B41F1C021F04002B1A03 /* Virtual_Tourist.xcdatamodeld */,
+				36D59A5F1D19A6EA008A8A4D /* .gitignore */,
 			);
 			path = "Virtual Tourist";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D59A601D19A6EA008A8A4D /* .gitignore in Resources */,
 				36A3B4261C021F04002B1A03 /* LaunchScreen.storyboard in Resources */,
 				36A3B4231C021F04002B1A03 /* Assets.xcassets in Resources */,
 				36A3B41E1C021F04002B1A03 /* Main.storyboard in Resources */,
