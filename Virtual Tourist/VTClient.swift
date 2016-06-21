@@ -86,9 +86,9 @@ class VTClient:NSObject{
         if let photos = photos{
             let photo = photos["photo"]
             if let photo = photo{
-                if let photo = photo{
+                if case let photo as NSArray = photo{
                     
-                    for(var i = 0;i < photo.count;i++){
+                    for i in 0 ..< photo.count{
                         let photo1 = photo[i]
                         
                         var currentImageString = "https://farm"
@@ -126,7 +126,7 @@ class VTClient:NSObject{
     // Get pictures
     func getPictures(urlArray:[NSURL],pathArray:[String]){
         
-        for(var i:Int = 0; i < urlArray.count; i++){
+        for i in 0 ..< urlArray.count{
             
             
             let imageData = NSData(contentsOfURL:urlArray[i])
@@ -146,7 +146,7 @@ class VTClient:NSObject{
                 
                 // increment count variable for collection view controller use
                 var downloadCount = VTClient.Count.downloaded!
-                downloadCount++
+                downloadCount += 1
                 VTClient.Count.downloaded = downloadCount
                 
             }catch{

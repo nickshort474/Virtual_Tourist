@@ -1,0 +1,245 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Box"
+provides-nominal:
+- "C15Virtual_Tourist3Box"
+- "VC15Virtual_Tourist3Box4Keys"
+provides-member:
+- ["C15Virtual_Tourist3Box", ""]
+- ["VC15Virtual_Tourist3Box4Keys", ""]
+provides-dynamic-lookup:
+- "maxLong"
+- "pageNumber"
+- "minLong"
+- "maxLat"
+- "minLat"
+- "pin"
+depends-top-level:
+- "NSNumber"
+- "NSManagedObjectContext"
+- "String"
+- "StringLiteralType"
+- "Box"
+- "Pin"
+- "NSManagedObject"
+- "NSEntityDescription"
+- "AnyObject"
+depends-member:
+- !private ["Ps9AnyObject", "Box"]
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "entityForName"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "maxLat"]
+- ["Ps9AnyObject", "maxLong"]
+- ["Ps9AnyObject", "minLat"]
+- ["Ps9AnyObject", "minLong"]
+- ["Ps9AnyObject", "pageNumber"]
+- ["Ps9AnyObject", "pin"]
+- ["Ps9AnyObject", ""]
+- ["C15Virtual_Tourist3Box", "AnyObject"]
+- !private ["C15Virtual_Tourist3Box", "Box"]
+- ["C15Virtual_Tourist3Box", "Keys"]
+- ["C15Virtual_Tourist3Box", "NSEntityDescription"]
+- ["C15Virtual_Tourist3Box", "NSManagedObjectContext"]
+- ["C15Virtual_Tourist3Box", "NSNumber"]
+- ["C15Virtual_Tourist3Box", "Pin"]
+- ["C15Virtual_Tourist3Box", "String"]
+- ["C15Virtual_Tourist3Box", "deinit"]
+- ["C15Virtual_Tourist3Box", "init"]
+- ["C15Virtual_Tourist3Box", "maxLat"]
+- ["C15Virtual_Tourist3Box", "maxLong"]
+- ["C15Virtual_Tourist3Box", "minLat"]
+- ["C15Virtual_Tourist3Box", "minLong"]
+- ["C15Virtual_Tourist3Box", "pageNumber"]
+- ["C15Virtual_Tourist3Box", "pin"]
+- !private ["Ps11CVarArgType", "Box"]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "NSEntityDescription"]
+- !private ["Ps11CVarArgType", "entityForName"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "maxLat"]
+- ["Ps11CVarArgType", "maxLong"]
+- ["Ps11CVarArgType", "minLat"]
+- ["Ps11CVarArgType", "minLong"]
+- ["Ps11CVarArgType", "pageNumber"]
+- ["Ps11CVarArgType", "pin"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Box"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "entityForName"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "maxLat"]
+- ["Ps28CustomDebugStringConvertible", "maxLong"]
+- ["Ps28CustomDebugStringConvertible", "minLat"]
+- ["Ps28CustomDebugStringConvertible", "minLong"]
+- ["Ps28CustomDebugStringConvertible", "pageNumber"]
+- ["Ps28CustomDebugStringConvertible", "pin"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Box"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
+- !private ["Ps23CustomStringConvertible", "entityForName"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "maxLat"]
+- ["Ps23CustomStringConvertible", "maxLong"]
+- ["Ps23CustomStringConvertible", "minLat"]
+- ["Ps23CustomStringConvertible", "minLong"]
+- ["Ps23CustomStringConvertible", "pageNumber"]
+- ["Ps23CustomStringConvertible", "pin"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Box"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "NSEntityDescription"]
+- !private ["Ps9Equatable", "entityForName"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "maxLat"]
+- ["Ps9Equatable", "maxLong"]
+- ["Ps9Equatable", "minLat"]
+- ["Ps9Equatable", "minLong"]
+- ["Ps9Equatable", "pageNumber"]
+- ["Ps9Equatable", "pin"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Box"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "NSEntityDescription"]
+- !private ["Ps8Hashable", "entityForName"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "maxLat"]
+- ["Ps8Hashable", "maxLong"]
+- ["Ps8Hashable", "minLat"]
+- ["Ps8Hashable", "minLong"]
+- ["Ps8Hashable", "pageNumber"]
+- ["Ps8Hashable", "pin"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["VC15Virtual_Tourist3Box4Keys", "init"]
+- ["VC15Virtual_Tourist3Box4Keys", "maxLat"]
+- ["VC15Virtual_Tourist3Box4Keys", "maxLong"]
+- ["VC15Virtual_Tourist3Box4Keys", "minLat"]
+- ["VC15Virtual_Tourist3Box4Keys", "minLong"]
+- ["VC15Virtual_Tourist3Box4Keys", "pageNumber"]
+- !private ["PSo8NSCoding", "entityForName"]
+- !private ["PSo9NSCopying", "entityForName"]
+- !private ["CSo19NSEntityDescription", "entityForName"]
+- !private ["PSo17NSFastEnumeration", "entityForName"]
+- ["CSo15NSManagedObject", "AnyObject"]
+- !private ["CSo15NSManagedObject", "Box"]
+- !private ["CSo15NSManagedObject", "Keys"]
+- ["CSo15NSManagedObject", "NSEntityDescription"]
+- ["CSo15NSManagedObject", "NSManagedObjectContext"]
+- ["CSo15NSManagedObject", "NSNumber"]
+- ["CSo15NSManagedObject", "Pin"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "maxLat"]
+- ["CSo15NSManagedObject", "maxLong"]
+- ["CSo15NSManagedObject", "minLat"]
+- ["CSo15NSManagedObject", "minLong"]
+- ["CSo15NSManagedObject", "pageNumber"]
+- ["CSo15NSManagedObject", "pin"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Box"]
+- !private ["CSo8NSObject", "Keys"]
+- ["CSo8NSObject", "NSEntityDescription"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "NSNumber"]
+- ["CSo8NSObject", "Pin"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "entityForName"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "maxLat"]
+- ["CSo8NSObject", "maxLong"]
+- ["CSo8NSObject", "minLat"]
+- ["CSo8NSObject", "minLong"]
+- ["CSo8NSObject", "pageNumber"]
+- ["CSo8NSObject", "pin"]
+- !private ["PSo16NSObjectProtocol", "Box"]
+- !private ["PSo16NSObjectProtocol", "Keys"]
+- !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
+- !private ["PSo16NSObjectProtocol", "entityForName"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "maxLat"]
+- ["PSo16NSObjectProtocol", "maxLong"]
+- ["PSo16NSObjectProtocol", "minLat"]
+- ["PSo16NSObjectProtocol", "minLong"]
+- ["PSo16NSObjectProtocol", "pageNumber"]
+- ["PSo16NSObjectProtocol", "pin"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C15Virtual_Tourist3Box"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "VC15Virtual_Tourist3Box4Keys"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "b25feff82d257cd9f3e6f8eff6256ab5"

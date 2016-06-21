@@ -1,0 +1,615 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["C15Virtual_Tourist8VTClient", ""]
+- ["C15Virtual_Tourist8VTClient", "escapedParameters"]
+- ["C15Virtual_Tourist8VTClient", "parseJSON"]
+- ["C15Virtual_Tourist8VTClient", "pathForImage"]
+provides-dynamic-lookup:
+- "parseJSON"
+- "pathForImage"
+- "escapedParameters"
+depends-top-level:
+- "VTClient"
+- !private "Array"
+- !private "!"
+- !private "NSJSONSerialization"
+- "NSData"
+- !private "NSLocalizedDescriptionKey"
+- "String"
+- !private "Dictionary"
+- !private "StringLiteralType"
+- "AnyObject"
+- !private "UnicodeScalarType"
+- !private "NSFileManager"
+- "NSError"
+- !private "+="
+- !private "+"
+- !private "NSCharacterSet"
+- "Void"
+depends-member:
+- !private ["Ps9AnyObject", "JSONObjectWithData"]
+- !private ["Ps9AnyObject", "NSCharacterSet"]
+- !private ["Ps9AnyObject", "NSError"]
+- !private ["Ps9AnyObject", "NSFileManager"]
+- !private ["Ps9AnyObject", "NSJSONSerialization"]
+- !private ["Ps9AnyObject", "NSLocalizedDescriptionKey"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
+- !private ["Ps9AnyObject", "URLQueryAllowedCharacterSet"]
+- !private ["Ps9AnyObject", "URLsForDirectory"]
+- !private ["Ps9AnyObject", "defaultManager"]
+- ["Ps9AnyObject", "escapedParameters"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "parseJSON"]
+- !private ["Ps9AnyObject", "path"]
+- ["Ps9AnyObject", "pathForImage"]
+- !private ["Ps9AnyObject", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Buffer"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "first"]
+- !private ["Sa", "init"]
+- !private ["Sa", "isEmpty"]
+- !private ["Sa", "joinWithSeparator"]
+- !private ["Ps23ArrayLiteralConvertible", "AllowFragments"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "UserDomainMask"]
+- !private ["Ps23ArrayLiteralConvertible", "_Buffer"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "first"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "isEmpty"]
+- !private ["Ps23ArrayLiteralConvertible", "joinWithSeparator"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "JSONObjectWithData"]
+- !private ["Ps11CVarArgType", "NSCharacterSet"]
+- !private ["Ps11CVarArgType", "NSError"]
+- !private ["Ps11CVarArgType", "NSFileManager"]
+- !private ["Ps11CVarArgType", "NSJSONSerialization"]
+- !private ["Ps11CVarArgType", "NSLocalizedDescriptionKey"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "URLByAppendingPathComponent"]
+- !private ["Ps11CVarArgType", "URLQueryAllowedCharacterSet"]
+- !private ["Ps11CVarArgType", "URLsForDirectory"]
+- !private ["Ps11CVarArgType", "defaultManager"]
+- ["Ps11CVarArgType", "escapedParameters"]
+- !private ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "parseJSON"]
+- !private ["Ps11CVarArgType", "path"]
+- ["Ps11CVarArgType", "pathForImage"]
+- !private ["Ps11CVarArgType", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps14CollectionType", "_Buffer"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "first"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "isEmpty"]
+- !private ["Ps14CollectionType", "joinWithSeparator"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "JSONObjectWithData"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "NSCharacterSet"]
+- !private ["Ps28CustomDebugStringConvertible", "NSError"]
+- !private ["Ps28CustomDebugStringConvertible", "NSFileManager"]
+- !private ["Ps28CustomDebugStringConvertible", "NSJSONSerialization"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLocalizedDescriptionKey"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps28CustomDebugStringConvertible", "URLQueryAllowedCharacterSet"]
+- !private ["Ps28CustomDebugStringConvertible", "URLsForDirectory"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "_Buffer"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "defaultManager"]
+- ["Ps28CustomDebugStringConvertible", "escapedParameters"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
+- !private ["Ps28CustomDebugStringConvertible", "joinWithSeparator"]
+- ["Ps28CustomDebugStringConvertible", "parseJSON"]
+- !private ["Ps28CustomDebugStringConvertible", "path"]
+- ["Ps28CustomDebugStringConvertible", "pathForImage"]
+- !private ["Ps28CustomDebugStringConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "JSONObjectWithData"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "NSCharacterSet"]
+- !private ["Ps23CustomStringConvertible", "NSError"]
+- !private ["Ps23CustomStringConvertible", "NSFileManager"]
+- !private ["Ps23CustomStringConvertible", "NSJSONSerialization"]
+- !private ["Ps23CustomStringConvertible", "NSLocalizedDescriptionKey"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps23CustomStringConvertible", "URLQueryAllowedCharacterSet"]
+- !private ["Ps23CustomStringConvertible", "URLsForDirectory"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_Buffer"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "defaultManager"]
+- ["Ps23CustomStringConvertible", "escapedParameters"]
+- !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isEmpty"]
+- !private ["Ps23CustomStringConvertible", "joinWithSeparator"]
+- ["Ps23CustomStringConvertible", "parseJSON"]
+- !private ["Ps23CustomStringConvertible", "path"]
+- ["Ps23CustomStringConvertible", "pathForImage"]
+- !private ["Ps23CustomStringConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Vs10Dictionary", "Generator"]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Vs19DictionaryGenerator", "Element"]
+- !private ["Ps28DictionaryLiteralConvertible", "Generator"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "AllowFragments"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "DocumentDirectory"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "JSONObjectWithData"]
+- !private ["Ps9Equatable", "NSCharacterSet"]
+- !private ["Ps9Equatable", "NSError"]
+- !private ["Ps9Equatable", "NSFileManager"]
+- !private ["Ps9Equatable", "NSJSONSerialization"]
+- !private ["Ps9Equatable", "NSLocalizedDescriptionKey"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "URLByAppendingPathComponent"]
+- !private ["Ps9Equatable", "URLQueryAllowedCharacterSet"]
+- !private ["Ps9Equatable", "URLsForDirectory"]
+- !private ["Ps9Equatable", "UserDomainMask"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "defaultManager"]
+- ["Ps9Equatable", "escapedParameters"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "parseJSON"]
+- !private ["Ps9Equatable", "path"]
+- ["Ps9Equatable", "pathForImage"]
+- !private ["Ps9Equatable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps9ErrorType", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Sf", "deinit"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "DocumentDirectory"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "JSONObjectWithData"]
+- !private ["Ps8Hashable", "NSCharacterSet"]
+- !private ["Ps8Hashable", "NSError"]
+- !private ["Ps8Hashable", "NSFileManager"]
+- !private ["Ps8Hashable", "NSJSONSerialization"]
+- !private ["Ps8Hashable", "NSLocalizedDescriptionKey"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "URLByAppendingPathComponent"]
+- !private ["Ps8Hashable", "URLQueryAllowedCharacterSet"]
+- !private ["Ps8Hashable", "URLsForDirectory"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "defaultManager"]
+- ["Ps8Hashable", "escapedParameters"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "parseJSON"]
+- !private ["Ps8Hashable", "path"]
+- ["Ps8Hashable", "pathForImage"]
+- !private ["Ps8Hashable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Ps9Indexable", "_Buffer"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "first"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "isEmpty"]
+- !private ["Ps9Indexable", "joinWithSeparator"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps14MirrorPathType", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Buffer"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "first"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps21MutableCollectionType", "isEmpty"]
+- !private ["Ps21MutableCollectionType", "joinWithSeparator"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Buffer"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "first"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "isEmpty"]
+- !private ["Ps16MutableIndexable", "joinWithSeparator"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Buffer"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "first"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["Ps16MutableSliceable", "isEmpty"]
+- !private ["Ps16MutableSliceable", "joinWithSeparator"]
+- !private ["CSo14NSCharacterSet", "URLQueryAllowedCharacterSet"]
+- !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
+- !private ["PSo8NSCoding", "URLQueryAllowedCharacterSet"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "path"]
+- !private ["PSo8NSCoding", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["PSo9NSCopying", "URLByAppendingPathComponent"]
+- !private ["PSo9NSCopying", "URLQueryAllowedCharacterSet"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "path"]
+- !private ["PSo9NSCopying", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["CSo7NSError", "init"]
+- !private ["CSo13NSFileManager", "URLsForDirectory"]
+- !private ["CSo13NSFileManager", "defaultManager"]
+- !private ["VSC20NSJSONReadingOptions", "AllowFragments"]
+- !private ["CSo19NSJSONSerialization", "JSONObjectWithData"]
+- !private ["PSo16NSMutableCopying", "URLQueryAllowedCharacterSet"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "JSONObjectWithData"]
+- !private ["CSo8NSObject", "NSCharacterSet"]
+- ["CSo8NSObject", "NSData"]
+- ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSFileManager"]
+- !private ["CSo8NSObject", "NSJSONSerialization"]
+- !private ["CSo8NSObject", "NSLocalizedDescriptionKey"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "URLByAppendingPathComponent"]
+- !private ["CSo8NSObject", "URLQueryAllowedCharacterSet"]
+- !private ["CSo8NSObject", "URLsForDirectory"]
+- ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "defaultManager"]
+- ["CSo8NSObject", "escapedParameters"]
+- !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "parseJSON"]
+- !private ["CSo8NSObject", "path"]
+- ["CSo8NSObject", "pathForImage"]
+- !private ["CSo8NSObject", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["PSo16NSObjectProtocol", "JSONObjectWithData"]
+- !private ["PSo16NSObjectProtocol", "NSCharacterSet"]
+- !private ["PSo16NSObjectProtocol", "NSError"]
+- !private ["PSo16NSObjectProtocol", "NSFileManager"]
+- !private ["PSo16NSObjectProtocol", "NSJSONSerialization"]
+- !private ["PSo16NSObjectProtocol", "NSLocalizedDescriptionKey"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
+- !private ["PSo16NSObjectProtocol", "URLQueryAllowedCharacterSet"]
+- !private ["PSo16NSObjectProtocol", "URLsForDirectory"]
+- !private ["PSo16NSObjectProtocol", "defaultManager"]
+- ["PSo16NSObjectProtocol", "escapedParameters"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "parseJSON"]
+- !private ["PSo16NSObjectProtocol", "path"]
+- ["PSo16NSObjectProtocol", "pathForImage"]
+- !private ["PSo16NSObjectProtocol", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["OSC21NSSearchPathDirectory", "DocumentDirectory"]
+- !private ["VSC22NSSearchPathDomainMask", "UserDomainMask"]
+- !private ["PSo14NSSecureCoding", "URLByAppendingPathComponent"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "path"]
+- !private ["PSo14NSSecureCoding", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["CSo5NSURL", "URLByAppendingPathComponent"]
+- !private ["CSo5NSURL", "path"]
+- !private ["Ps13OptionSetType", "AllowFragments"]
+- !private ["Ps13OptionSetType", "UserDomainMask"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps16OutputStreamType", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Buffer"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "first"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "isEmpty"]
+- !private ["Ps30RangeReplaceableCollectionType", "joinWithSeparator"]
+- !private ["Ps16RawRepresentable", "AllowFragments"]
+- !private ["Ps16RawRepresentable", "DocumentDirectory"]
+- !private ["Ps16RawRepresentable", "UserDomainMask"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "_Buffer"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "first"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "isEmpty"]
+- !private ["Ps12SequenceType", "joinWithSeparator"]
+- !private ["Ps14SetAlgebraType", "AllowFragments"]
+- !private ["Ps14SetAlgebraType", "UserDomainMask"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Streamable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["SS", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- ["C15Virtual_Tourist8VTClient", "AnyObject"]
+- !private ["C15Virtual_Tourist8VTClient", "NSCharacterSet"]
+- ["C15Virtual_Tourist8VTClient", "NSData"]
+- ["C15Virtual_Tourist8VTClient", "NSError"]
+- !private ["C15Virtual_Tourist8VTClient", "NSFileManager"]
+- !private ["C15Virtual_Tourist8VTClient", "NSJSONSerialization"]
+- !private ["C15Virtual_Tourist8VTClient", "NSLocalizedDescriptionKey"]
+- ["C15Virtual_Tourist8VTClient", "String"]
+- ["C15Virtual_Tourist8VTClient", "Void"]
+- ["C15Virtual_Tourist8VTClient", "escapedParameters"]
+- ["C15Virtual_Tourist8VTClient", "parseJSON"]
+- ["C15Virtual_Tourist8VTClient", "pathForImage"]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Buffer"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "first"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps10_ArrayType", "isEmpty"]
+- !private ["Ps10_ArrayType", "joinWithSeparator"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Buffer"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "first"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "isEmpty"]
+- !private ["Ps24_DestructorSafeContainer", "joinWithSeparator"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "path"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Buffer"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
+- !private ["Ps21_ObjectiveCBridgeable", "joinWithSeparator"]
+- !private ["Ps21_ObjectiveCBridgeable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "URLByAppendingPathComponent"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_Buffer"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "first"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "isEmpty"]
+- !private ["Ps12_Reflectable", "joinWithSeparator"]
+- !private ["Ps12_Reflectable", "path"]
+- !private ["Ps12_Reflectable", "stringByAddingPercentEncodingWithAllowedCharacters"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Vs19DictionaryGenerator"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps9ErrorType"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "SQ"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- !private "CSo14NSCharacterSet"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo7NSError"
+- !private "CSo13NSFileManager"
+- !private "VSC20NSJSONReadingOptions"
+- !private "CSo19NSJSONSerialization"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "OSC21NSSearchPathDirectory"
+- !private "VSC22NSSearchPathDomainMask"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo5NSURL"
+- !private "Ps13OptionSetType"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- "C15Virtual_Tourist8VTClient"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "a8f1621f1cd046c5be846390102090ae"

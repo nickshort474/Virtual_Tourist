@@ -1,0 +1,332 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Photo"
+provides-nominal:
+- "C15Virtual_Tourist5Photo"
+- "VC15Virtual_Tourist5Photo4Keys"
+provides-member:
+- ["C15Virtual_Tourist5Photo", ""]
+- ["VC15Virtual_Tourist5Photo4Keys", ""]
+provides-dynamic-lookup:
+- "pin"
+- "savedToDirectory"
+- "imagePath"
+- "prepareForDeletion"
+depends-top-level:
+- "Pin"
+- "StringLiteralType"
+- "NSEntityDescription"
+- "String"
+- "NSManagedObject"
+- "NSManagedObjectContext"
+- "AnyObject"
+- !private "NSURL"
+- !private "VTClient"
+- "Photo"
+- !private "NSFileManager"
+depends-member:
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "NSFileManager"]
+- !private ["Ps9AnyObject", "NSURL"]
+- !private ["Ps9AnyObject", "Photo"]
+- !private ["Ps9AnyObject", "VTClient"]
+- !private ["Ps9AnyObject", "defaultManager"]
+- !private ["Ps9AnyObject", "entityForName"]
+- !private ["Ps9AnyObject", "fileExistsAtPath"]
+- ["Ps9AnyObject", "imagePath"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "lastPathComponent"]
+- !private ["Ps9AnyObject", "pathForImage"]
+- ["Ps9AnyObject", "pin"]
+- ["Ps9AnyObject", "prepareForDeletion"]
+- !private ["Ps9AnyObject", "removeItemAtPath"]
+- ["Ps9AnyObject", "savedToDirectory"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "NSEntityDescription"]
+- !private ["Ps11CVarArgType", "NSFileManager"]
+- !private ["Ps11CVarArgType", "NSURL"]
+- !private ["Ps11CVarArgType", "Photo"]
+- !private ["Ps11CVarArgType", "VTClient"]
+- !private ["Ps11CVarArgType", "defaultManager"]
+- !private ["Ps11CVarArgType", "entityForName"]
+- !private ["Ps11CVarArgType", "fileExistsAtPath"]
+- ["Ps11CVarArgType", "imagePath"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "lastPathComponent"]
+- !private ["Ps11CVarArgType", "pathForImage"]
+- ["Ps11CVarArgType", "pin"]
+- ["Ps11CVarArgType", "prepareForDeletion"]
+- !private ["Ps11CVarArgType", "removeItemAtPath"]
+- ["Ps11CVarArgType", "savedToDirectory"]
+- !private ["Ps11CVarArgType", "sharedInstance"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "NSFileManager"]
+- !private ["Ps28CustomDebugStringConvertible", "NSURL"]
+- !private ["Ps28CustomDebugStringConvertible", "Photo"]
+- !private ["Ps28CustomDebugStringConvertible", "VTClient"]
+- !private ["Ps28CustomDebugStringConvertible", "defaultManager"]
+- !private ["Ps28CustomDebugStringConvertible", "entityForName"]
+- !private ["Ps28CustomDebugStringConvertible", "fileExistsAtPath"]
+- ["Ps28CustomDebugStringConvertible", "imagePath"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "lastPathComponent"]
+- !private ["Ps28CustomDebugStringConvertible", "pathForImage"]
+- ["Ps28CustomDebugStringConvertible", "pin"]
+- ["Ps28CustomDebugStringConvertible", "prepareForDeletion"]
+- !private ["Ps28CustomDebugStringConvertible", "removeItemAtPath"]
+- ["Ps28CustomDebugStringConvertible", "savedToDirectory"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
+- !private ["Ps23CustomStringConvertible", "NSFileManager"]
+- !private ["Ps23CustomStringConvertible", "NSURL"]
+- !private ["Ps23CustomStringConvertible", "Photo"]
+- !private ["Ps23CustomStringConvertible", "VTClient"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "defaultManager"]
+- !private ["Ps23CustomStringConvertible", "entityForName"]
+- !private ["Ps23CustomStringConvertible", "fileExistsAtPath"]
+- ["Ps23CustomStringConvertible", "imagePath"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "lastPathComponent"]
+- !private ["Ps23CustomStringConvertible", "pathForImage"]
+- ["Ps23CustomStringConvertible", "pin"]
+- ["Ps23CustomStringConvertible", "prepareForDeletion"]
+- !private ["Ps23CustomStringConvertible", "removeItemAtPath"]
+- ["Ps23CustomStringConvertible", "savedToDirectory"]
+- !private ["Ps23CustomStringConvertible", "sharedInstance"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "NSEntityDescription"]
+- !private ["Ps9Equatable", "NSFileManager"]
+- !private ["Ps9Equatable", "NSURL"]
+- !private ["Ps9Equatable", "Photo"]
+- !private ["Ps9Equatable", "VTClient"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "defaultManager"]
+- !private ["Ps9Equatable", "entityForName"]
+- !private ["Ps9Equatable", "fileExistsAtPath"]
+- ["Ps9Equatable", "imagePath"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "lastPathComponent"]
+- !private ["Ps9Equatable", "pathForImage"]
+- ["Ps9Equatable", "pin"]
+- ["Ps9Equatable", "prepareForDeletion"]
+- !private ["Ps9Equatable", "removeItemAtPath"]
+- ["Ps9Equatable", "savedToDirectory"]
+- !private ["Ps9Equatable", "sharedInstance"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "NSEntityDescription"]
+- !private ["Ps8Hashable", "NSFileManager"]
+- !private ["Ps8Hashable", "NSURL"]
+- !private ["Ps8Hashable", "Photo"]
+- !private ["Ps8Hashable", "VTClient"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "defaultManager"]
+- !private ["Ps8Hashable", "entityForName"]
+- !private ["Ps8Hashable", "fileExistsAtPath"]
+- ["Ps8Hashable", "imagePath"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "lastPathComponent"]
+- !private ["Ps8Hashable", "pathForImage"]
+- ["Ps8Hashable", "pin"]
+- ["Ps8Hashable", "prepareForDeletion"]
+- !private ["Ps8Hashable", "removeItemAtPath"]
+- ["Ps8Hashable", "savedToDirectory"]
+- !private ["Ps8Hashable", "sharedInstance"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["VC15Virtual_Tourist5Photo4Keys", "imagePath"]
+- ["VC15Virtual_Tourist5Photo4Keys", "init"]
+- ["VC15Virtual_Tourist5Photo4Keys", "savedToDirectory"]
+- !private ["PSo8NSCoding", "entityForName"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "lastPathComponent"]
+- !private ["PSo9NSCopying", "entityForName"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "lastPathComponent"]
+- !private ["CSo19NSEntityDescription", "entityForName"]
+- !private ["PSo17NSFastEnumeration", "entityForName"]
+- !private ["CSo13NSFileManager", "defaultManager"]
+- !private ["CSo13NSFileManager", "fileExistsAtPath"]
+- !private ["CSo13NSFileManager", "removeItemAtPath"]
+- ["CSo15NSManagedObject", "AnyObject"]
+- !private ["CSo15NSManagedObject", "Keys"]
+- ["CSo15NSManagedObject", "NSEntityDescription"]
+- !private ["CSo15NSManagedObject", "NSFileManager"]
+- ["CSo15NSManagedObject", "NSManagedObjectContext"]
+- !private ["CSo15NSManagedObject", "NSURL"]
+- !private ["CSo15NSManagedObject", "Photo"]
+- ["CSo15NSManagedObject", "Pin"]
+- ["CSo15NSManagedObject", "String"]
+- !private ["CSo15NSManagedObject", "VTClient"]
+- ["CSo15NSManagedObject", "imagePath"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "pin"]
+- ["CSo15NSManagedObject", "prepareForDeletion"]
+- ["CSo15NSManagedObject", "savedToDirectory"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Keys"]
+- ["CSo8NSObject", "NSEntityDescription"]
+- !private ["CSo8NSObject", "NSFileManager"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- !private ["CSo8NSObject", "NSURL"]
+- !private ["CSo8NSObject", "Photo"]
+- ["CSo8NSObject", "Pin"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "VTClient"]
+- !private ["CSo8NSObject", "defaultManager"]
+- !private ["CSo8NSObject", "entityForName"]
+- !private ["CSo8NSObject", "fileExistsAtPath"]
+- ["CSo8NSObject", "imagePath"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "lastPathComponent"]
+- !private ["CSo8NSObject", "pathForImage"]
+- ["CSo8NSObject", "pin"]
+- ["CSo8NSObject", "prepareForDeletion"]
+- !private ["CSo8NSObject", "removeItemAtPath"]
+- ["CSo8NSObject", "savedToDirectory"]
+- !private ["CSo8NSObject", "sharedInstance"]
+- !private ["PSo16NSObjectProtocol", "Keys"]
+- !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
+- !private ["PSo16NSObjectProtocol", "NSFileManager"]
+- !private ["PSo16NSObjectProtocol", "NSURL"]
+- !private ["PSo16NSObjectProtocol", "Photo"]
+- !private ["PSo16NSObjectProtocol", "VTClient"]
+- !private ["PSo16NSObjectProtocol", "defaultManager"]
+- !private ["PSo16NSObjectProtocol", "entityForName"]
+- !private ["PSo16NSObjectProtocol", "fileExistsAtPath"]
+- ["PSo16NSObjectProtocol", "imagePath"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "lastPathComponent"]
+- !private ["PSo16NSObjectProtocol", "pathForImage"]
+- ["PSo16NSObjectProtocol", "pin"]
+- ["PSo16NSObjectProtocol", "prepareForDeletion"]
+- !private ["PSo16NSObjectProtocol", "removeItemAtPath"]
+- ["PSo16NSObjectProtocol", "savedToDirectory"]
+- !private ["PSo16NSObjectProtocol", "sharedInstance"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "lastPathComponent"]
+- !private ["CSo5NSURL", "init"]
+- !private ["CSo5NSURL", "lastPathComponent"]
+- !private ["Sq", "deinit"]
+- ["C15Virtual_Tourist5Photo", "AnyObject"]
+- ["C15Virtual_Tourist5Photo", "Keys"]
+- ["C15Virtual_Tourist5Photo", "NSEntityDescription"]
+- !private ["C15Virtual_Tourist5Photo", "NSFileManager"]
+- ["C15Virtual_Tourist5Photo", "NSManagedObjectContext"]
+- !private ["C15Virtual_Tourist5Photo", "NSURL"]
+- !private ["C15Virtual_Tourist5Photo", "Photo"]
+- ["C15Virtual_Tourist5Photo", "Pin"]
+- ["C15Virtual_Tourist5Photo", "String"]
+- !private ["C15Virtual_Tourist5Photo", "VTClient"]
+- ["C15Virtual_Tourist5Photo", "deinit"]
+- ["C15Virtual_Tourist5Photo", "imagePath"]
+- ["C15Virtual_Tourist5Photo", "init"]
+- ["C15Virtual_Tourist5Photo", "pin"]
+- ["C15Virtual_Tourist5Photo", "prepareForDeletion"]
+- ["C15Virtual_Tourist5Photo", "savedToDirectory"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["C15Virtual_Tourist8VTClient", "pathForImage"]
+- !private ["C15Virtual_Tourist8VTClient", "sharedInstance"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "lastPathComponent"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "lastPathComponent"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "VC15Virtual_Tourist5Photo4Keys"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- !private "CSo13NSFileManager"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo5NSURL"
+- !private "Sq"
+- "C15Virtual_Tourist5Photo"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "C15Virtual_Tourist8VTClient"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "896046fca37910eb31e1e8001a3269b1"

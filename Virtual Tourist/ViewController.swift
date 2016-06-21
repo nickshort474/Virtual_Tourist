@@ -29,13 +29,13 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
      // Do any additional setup after loading the view, typically from a nib.
         
         
-        deletePins =  UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.Plain, target:self, action:"removePinsFromMap")
+        deletePins =  UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.Plain, target:self, action:#selector(ViewController.removePinsFromMap))
         self.navigationItem.rightBarButtonItem = deletePins
         deletePinButton.hidden = true
         deletePinButton.userInteractionEnabled = false
         
         
-        let singleTap:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "addNewPinToMap:")
+        let singleTap:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.addNewPinToMap(_:)))
         singleTap.numberOfTouchesRequired = 1
         singleTap.delegate = self
         
@@ -75,7 +75,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
     
     
     func addPersistedPinsToMap(){
-        for(var i:Int = 0; i < pinArray.count; i++){
+        for i in  0 ..< pinArray.count{
             let pinCoords:CLLocationCoordinate2D = CLLocationCoordinate2DMake(pinArray[i].latitude as Double,pinArray[i].longitude as Double)
             let annotation = PinAnnotation(pin: pinArray[i],coords: pinCoords)
             self.MapView.addAnnotation(annotation)
@@ -144,7 +144,9 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
             VTClient.sharedInstance().connectToFlickr(boundingDictionary){
                 (result,photoID,error) in
                 
-                for(var i:Int = 0; i < photoID.count ; i++){
+                let result = result as! NSArray
+                
+                for i in 0 ..< photoID.count{
                     
                     // use returned imageURL path to save to core data
                     let fullPath = VTClient.sharedInstance().pathForImage(photoID[i] as! String)
@@ -224,38 +226,7 @@ class ViewController: UIViewController, MKMapViewDelegate,UIGestureRecognizerDel
                
             }
             
-            //Remove photos from core data related to Pin
-            /*let photoPredicate = NSPredicate(format:"pin == %@",pinAnnotation.pin)
-            let photoFetchRequest = NSFetchRequest(entityName: "Photo")
-            photoFetchRequest.predicate = photoPredicate
-            
-            do{
-                let fetchEntities = try sharedContext.executeFetchRequest(photoFetchRequest) as! [Photo]
-                
-                for entity in fetchEntities{
-                    sharedContext.deleteObject(entity)
-                }
-                
-            }catch{
-                
-            }
-            
-            //Remove box entity related to Pin
-            let boxPredicate = NSPredicate(format: "pin == %@", pinAnnotation.pin)
-            let boxFetchRequest = NSFetchRequest(entityName: "Box")
-            boxFetchRequest.predicate = boxPredicate
-            
-            do{
-                let fetchEntities = try sharedContext.executeFetchRequest(boxFetchRequest) as! [Box]
-                if let entityToDelete = fetchEntities.first{
-                    sharedContext.deleteObject(entityToDelete)
-                }
-            }catch{
-                
-            }
-            
-            */
-            // save context
+          
             do{
                 try sharedContext.save()
             }catch{

@@ -1,0 +1,211 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Pin"
+provides-nominal:
+- "C15Virtual_Tourist3Pin"
+- "VC15Virtual_Tourist3Pin4Keys"
+provides-member:
+- ["C15Virtual_Tourist3Pin", ""]
+- ["VC15Virtual_Tourist3Pin4Keys", ""]
+provides-dynamic-lookup:
+- "firstTransition"
+- "latitude"
+- "longitude"
+- "photos"
+depends-top-level:
+- "Photo"
+- "NSEntityDescription"
+- "NSManagedObject"
+- "AnyObject"
+- "NSNumber"
+- "Pin"
+- "String"
+- "NSManagedObjectContext"
+- "StringLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "entityForName"]
+- ["Ps9AnyObject", "firstTransition"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "latitude"]
+- ["Ps9AnyObject", "longitude"]
+- ["Ps9AnyObject", "photos"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "NSEntityDescription"]
+- !private ["Ps11CVarArgType", "entityForName"]
+- ["Ps11CVarArgType", "firstTransition"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "latitude"]
+- ["Ps11CVarArgType", "longitude"]
+- ["Ps11CVarArgType", "photos"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "entityForName"]
+- ["Ps28CustomDebugStringConvertible", "firstTransition"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "latitude"]
+- ["Ps28CustomDebugStringConvertible", "longitude"]
+- ["Ps28CustomDebugStringConvertible", "photos"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
+- !private ["Ps23CustomStringConvertible", "entityForName"]
+- ["Ps23CustomStringConvertible", "firstTransition"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "latitude"]
+- ["Ps23CustomStringConvertible", "longitude"]
+- ["Ps23CustomStringConvertible", "photos"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "NSEntityDescription"]
+- !private ["Ps9Equatable", "entityForName"]
+- ["Ps9Equatable", "firstTransition"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "latitude"]
+- ["Ps9Equatable", "longitude"]
+- ["Ps9Equatable", "photos"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "NSEntityDescription"]
+- !private ["Ps8Hashable", "entityForName"]
+- ["Ps8Hashable", "firstTransition"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "latitude"]
+- ["Ps8Hashable", "longitude"]
+- ["Ps8Hashable", "photos"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["VC15Virtual_Tourist3Pin4Keys", "firstTransition"]
+- ["VC15Virtual_Tourist3Pin4Keys", "init"]
+- ["VC15Virtual_Tourist3Pin4Keys", "latitude"]
+- ["VC15Virtual_Tourist3Pin4Keys", "longitude"]
+- !private ["PSo8NSCoding", "entityForName"]
+- !private ["PSo9NSCopying", "entityForName"]
+- !private ["CSo19NSEntityDescription", "entityForName"]
+- !private ["PSo17NSFastEnumeration", "entityForName"]
+- ["CSo15NSManagedObject", "AnyObject"]
+- !private ["CSo15NSManagedObject", "Keys"]
+- ["CSo15NSManagedObject", "NSEntityDescription"]
+- ["CSo15NSManagedObject", "NSManagedObjectContext"]
+- ["CSo15NSManagedObject", "NSNumber"]
+- ["CSo15NSManagedObject", "Photo"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "firstTransition"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "latitude"]
+- ["CSo15NSManagedObject", "longitude"]
+- ["CSo15NSManagedObject", "photos"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Keys"]
+- ["CSo8NSObject", "NSEntityDescription"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "NSNumber"]
+- ["CSo8NSObject", "Photo"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "entityForName"]
+- ["CSo8NSObject", "firstTransition"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "latitude"]
+- ["CSo8NSObject", "longitude"]
+- ["CSo8NSObject", "photos"]
+- !private ["PSo16NSObjectProtocol", "Keys"]
+- !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
+- !private ["PSo16NSObjectProtocol", "entityForName"]
+- ["PSo16NSObjectProtocol", "firstTransition"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "latitude"]
+- ["PSo16NSObjectProtocol", "longitude"]
+- ["PSo16NSObjectProtocol", "photos"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- ["C15Virtual_Tourist3Pin", "AnyObject"]
+- ["C15Virtual_Tourist3Pin", "Keys"]
+- ["C15Virtual_Tourist3Pin", "NSEntityDescription"]
+- ["C15Virtual_Tourist3Pin", "NSManagedObjectContext"]
+- ["C15Virtual_Tourist3Pin", "NSNumber"]
+- ["C15Virtual_Tourist3Pin", "Photo"]
+- ["C15Virtual_Tourist3Pin", "String"]
+- ["C15Virtual_Tourist3Pin", "deinit"]
+- ["C15Virtual_Tourist3Pin", "firstTransition"]
+- ["C15Virtual_Tourist3Pin", "init"]
+- ["C15Virtual_Tourist3Pin", "latitude"]
+- ["C15Virtual_Tourist3Pin", "longitude"]
+- ["C15Virtual_Tourist3Pin", "photos"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "VC15Virtual_Tourist3Pin4Keys"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- "C15Virtual_Tourist3Pin"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "42ce30654d026d79fc31fc85dd152eb6"

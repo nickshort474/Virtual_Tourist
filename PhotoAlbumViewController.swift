@@ -310,7 +310,7 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
                 boundingDictionary[Box.Keys.maxLat] = fetchedEntity.first?.maxLat
             
                 var newPageNumber = fetchedEntity.first?.pageNumber as! Int
-                newPageNumber++
+                newPageNumber += 1
                 boundingDictionary[Box.Keys.pageNumber] = newPageNumber
                 fetchedEntity.first?.pageNumber = newPageNumber as NSNumber
             
@@ -326,7 +326,9 @@ class PhotoAlbumViewController:UIViewController, UICollectionViewDataSource,UICo
             VTClient.sharedInstance().connectToFlickr(boundingDictionary){
                 (result,photoID,error)in
             
-                for(var i:Int = 0; i < photoID.count ; i++){
+                let result = result as! NSArray
+                
+                for i in 0 ..< photoID.count{
                     
                     // use returned imageURL path to save to core data
                     let fullPath = VTClient.sharedInstance().pathForImage(photoID[i] as! String)
